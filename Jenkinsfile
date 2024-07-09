@@ -38,17 +38,7 @@ pipeline {
            	    bat 'docker build -t  ey-samplejenkins --build-arg VER=1.0 .'
 		         }
              }
-        stage('Docker Login'){
-            steps {
-              echo "docker login from console"
-                //docker login docker.repository.esi.adp.com -u clientcentralcicd -p $adpdtrrepopassword
-            }                
-        }
-        stage('Docker Push'){
-            steps {
-               // bat 'docker push docker.repository.esi.adp.com/clientcentral/training:season2-batch3-sampleproject'
-            }
-        }
+       
         stage('Docker deploy'){
             steps {
                 bat 'docker run -itd -p  8086:8086 ey-samplejenkins '
