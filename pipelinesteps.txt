@@ -1,0 +1,65 @@
+c0909bf6713cd534393d47364d1da553431a220d
+
+
+Localsetup - individual individual practice
+STS:
+change network to MYADPWIFI and change network  Window-PReferences-Network-Direct
+
+add plugins - SonarLint,PMD, Jacoco  
+
+SonarLint- Codequality check  plugin
+PMD -   " ProgramMistake Detector plugin
+Jacoco - code coverage
+
+
+Pipeline setup- teamwise
+
+1-> Jenkins setup
+
+start jenkins from Softwares folder on desktop using batch file
+jenkins
+add JDK, Git, Maven- either 3.9 or MAVEN_HOME - environment variables 
+
+
+2->Docker 
+
+start Sonar
+localhost:9000
+get token -> Administration-Security-USers- get token
+
+3->
+
+
+//docker  login at  docker command prompt
+
+//dockerhub adp repository
+
+docker login  -u clientcentralcicd -p T19zAg7StlDlrav9PatH0bRO docker.repository.esi.adp.com
+
+
+
+
+//to avoid port issues
+
+ docker desktop every time stop or destroy container running on same port
+
+
+//Code Covergae:
+=======================
+
+// download jacoco plugin
+//For Jacoco plugin, go to 
+
+https://plugins.jenkins.io/jacoco/releases/
+
+//copy  jcoco plugin into VM and add
+
+Manage Jenkins->plugins->Advanced settings->Deploy Plugin->
+//  Choose File and finally click on Deploy button
+
+
+//after final step check image pushed into repository
+
+http://docker.repository.esi.adp.com/webapp/#/artifacts/browse/tree/General/adp-docker/
+  clientcentral/training/docker_jenkins_springboot
+
