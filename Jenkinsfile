@@ -8,11 +8,11 @@ pipeline {
                       }
             }
        
-	        stage('Junit5 Test') { 
-                 steps {
+	     //   stage('Junit5 Test') { 
+            //     steps {
 	               // bat 'mvn test'
-                  }
-            }
+            //     }
+          //  }
 
 	    stage('Jacoco Coverage Report') {
         	     steps{
