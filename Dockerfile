@@ -1,4 +1,4 @@
-FROM docker.repository.esi.adp.com/clientcentral/java:17.0.1-jdk
+FROM openjdk:latest
 #FROM adoptopenjdk/openjdk11:alpine-jre
 #RUN addgroup -S spring && adduser -S spring -G spring
 #USER spring:spring
